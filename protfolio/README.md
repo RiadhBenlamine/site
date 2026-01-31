@@ -5,7 +5,9 @@ This is a template for creating applications using Next.js 14 (app directory) an
 [Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
 
 ## Technologies Used
+
 className="relative w-72 md:w-96 animate-float drop-shadow-2xl"
+
 - [Next.js 14](https://nextjs.org/docs/getting-started)
 - [HeroUI v2](https://heroui.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
