@@ -17,7 +17,7 @@ export default function Home() {
               {/* LEFT SIDE — TEXT */}
               <div className="space-y-6">
                   <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                      Hey,<span className="text-blue-500">I'm Riadh 👋</span>
+                      Hey,<span className="text-blue-500">I&apos;m Riadh 👋</span>
                       <span className="block text-primary text-3xl md:text-4xl">
                           <Typewriter
                               options={{
@@ -37,7 +37,7 @@ export default function Home() {
                   </h1>
 
                   <p className="text-lg text-default-500 max-w-xl">
-                      I’m a cybersecurity enthusiast and ethical hacker with hands-on experience solving CTF challenges, analyzing complex systems, and building practical security tools. I thrive on uncovering vulnerabilities, learning advanced techniques, and applying my skills to real-world security problems.
+                      I&apos;m a cybersecurity enthusiast and ethical hacker with hands-on experience solving CTF challenges, analyzing complex systems, and building practical security tools. I thrive on uncovering vulnerabilities, learning advanced techniques, and applying my skills to real-world security problems.
                   </p>
 
                   <div className="flex gap-4">

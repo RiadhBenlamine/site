@@ -15,12 +15,12 @@ const skills: Skill[] = [
     { name: "Penetration Testing", level: 65, category: "Security", icon: Shield },
     { name: "Python/C++", level: 80, category: "Programming", icon: Code },
     { name: "Networking", level: 70, category: "Systems", icon: Wifi },
-    { name: "Cryptography", level: 75, category: "Security", icon: Lock },
+    { name: "Data security", level: 75, category: "Security", icon: Lock },
     { name: "Linux", level: 92, category: "Systems", icon: Terminal },
     { name: "Web Exploitation", level: 80, category: "Security", icon: Globe },
-    { name: "Log analysis", level: 70, category: "Analysis", icon: Code },
-    { name: "Windows Server 2022", level: 60, category: "Systems", icon: Server },
-    { name: "Database management", level: 82, category: "Systems", icon: Database },
+    { name: "Log analysis", level: 90, category: "Analysis", icon: Code },
+    { name: "Windows Server 2022", level: 72, category: "Systems", icon: Server },
+    { name: "Database management", level: 74, category: "Systems", icon: Database },
 ];
 
 const getSkillLabel = (level: number): string => {
