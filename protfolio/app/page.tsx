@@ -1,3 +1,4 @@
+// app/page.tsx
 "use client";
 import { Button, Image, Link } from "@heroui/react";
 import { SpotlightEffect } from "@/components/spotlight";
@@ -6,14 +7,35 @@ import Typewriter from "typewriter-effect";
 import Skills from "./skills/page";
 import Projects from "./projects/page";
 import Experience from "./experince/page";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
+
     return (
         <>
-            <section className="container mx-auto px-6 py-20">
+            {/* Hero/Landing Section */}
+            <section id="home" className="container mx-auto px-6 py-20 relative overflow-hidden">
+                {/* Animated background particles */}
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full animate-ping" />
+                    <div className="absolute top-40 right-20 w-1 h-1 bg-primary rounded-full animate-ping delay-300" />
+                    <div className="absolute bottom-40 left-1/3 w-1.5 h-1.5 bg-primary rounded-full animate-ping delay-700" />
+                </div>
+
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* LEFT SIDE — TEXT */}
-                    <div className="space-y-6">
+                    <div
+                        className={`space-y-6 transition-all duration-1000 ${
+                            isLoaded
+                                ? "opacity-100 translate-x-0"
+                                : "opacity-0 -translate-x-10"
+                        }`}
+                    >
                         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                             Hey <span className="text-blue-500">I&apos;m Riadh 👋</span>
                             <span className="block text-primary text-3xl md:text-4xl">
@@ -42,14 +64,22 @@ export default function Home() {
                             applying my skills to real-world security problems.
                         </p>
 
-                        <div className="flex gap-4">
-                            <Button color="primary" size="lg" radius="lg">
+                        <div className="flex gap-4 items-center">
+                            <Button
+                                as={Link}
+                                href="#projects"
+                                color="primary"
+                                size="lg"
+                                radius="lg"
+                                className="hover:scale-105 transition-transform"
+                            >
                                 View Projects
                             </Button>
                             <Link
                                 href="https://github.com/RiadhBenlamine/"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className="hover:scale-110 transition-transform"
                             >
                                 <FaGithub
                                     size={30}
@@ -60,6 +90,7 @@ export default function Home() {
                                 href="https://www.linkedin.com/in/riadh-benlamine/"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                className="hover:scale-110 transition-transform"
                             >
                                 <FaLinkedin
                                     size={30}
@@ -70,23 +101,37 @@ export default function Home() {
                     </div>
 
                     {/* RIGHT SIDE — FLOATING IMAGE */}
-                    <div className="relative flex justify-center items-center">
+                    <div
+                        className={`relative flex justify-center items-center transition-all duration-1000 delay-300 ${
+                            isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+                        }`}
+                    >
                         {/* Glow background */}
-                        <div className="absolute w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
+                        <div className="absolute w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
 
                         <SpotlightEffect direction="both" color="blue" size="w-96 h-96" />
                         <Image
                             alt="Hacker"
                             width={350}
                             src="hacker.png"
-                            className="animate-float"
+                            className="animate-float relative z-10"
                         />
                     </div>
                 </div>
             </section>
-            <Skills />
-            <Projects />
-            <Experience />
+
+            {/* Sections with IDs for smooth scrolling */}
+            <div id="experience">
+                <Experience />
+            </div>
+
+            <div id="skills">
+                <Skills />
+            </div>
+
+            <div id="projects">
+                <Projects />
+            </div>
         </>
     );
 }

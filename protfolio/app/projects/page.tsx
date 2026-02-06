@@ -34,12 +34,12 @@ const projects: Project[] = [
         icon: Globe,
     },
     {
-        title: "Password Cracker",
+        title: "Infostealer",
         description:
-            "Multi-threaded password cracking tool supporting various hash algorithms including MD5, SHA256, and bcrypt.",
+            "Fully undetectable POC stealing browser passwords.",
         image: "/project2.jpg",
-        tags: ["Python", "Cryptography", "Hashcat"],
-        github: "https://github.com/RiadhBenlamine/password-cracker",
+        tags: ["C++", "Malware ", "Red-team Op"],
+        github: "https://github.com/RiadhBenlamine/infostealer",
         icon: Lock,
     },
     {
