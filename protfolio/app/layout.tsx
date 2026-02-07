@@ -37,6 +37,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head>
         <title>{siteConfig.name}</title>
+          <meta name="google-site-verification" content="sf7MHbEOQfTYms8MKNAOeMvCa_3rGpnuwgz8glzlhEI" />
           <Analytics/>
       </head>
       <body
