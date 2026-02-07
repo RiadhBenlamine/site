@@ -16,89 +16,44 @@ interface ExperienceItem {
 }
 
 const experiences: ExperienceItem[] = [
-  {
-    title: "Security Researcher",
-    company: "CyberSec Labs",
-    location: "Remote",
-    period: "2024 - Present",
-    description: [
-      "Conducted penetration testing on web applications and identified critical vulnerabilities",
-      "Developed custom exploitation tools using Python and Bash",
-      "Participated in bug bounty programs and reported security flaws to major companies",
-      "Created comprehensive security reports and remediation recommendations",
-    ],
-    tags: ["Penetration Testing", "Bug Bounty", "Python"],
-    type: "work",
-  },
-  {
-    title: "CTF Team Member",
-    company: "HackTheBox University",
-    location: "Online",
-    period: "2023 - Present",
-    description: [
-      "Competed in national and international CTF competitions",
-      "Solved 200+ challenges across web exploitation, cryptography, and reverse engineering",
-      "Ranked in top 5% on HackTheBox platform",
-      "Mentored junior members on exploitation techniques",
-    ],
-    tags: ["CTF", "Web Exploitation", "Reverse Engineering"],
-    type: "work",
-  },
-  {
-    title: "Bachelor's in Computer Science",
-    company: "University of Technology",
-    location: "Algeria",
-    period: "2021 - 2024",
-    description: [
-      "Specialized in cybersecurity and network security",
-      "Graduated with honors (GPA: 3.8/4.0)",
-      "Led university cybersecurity club with 50+ members",
-      "Published research paper on machine learning in intrusion detection",
-    ],
-    tags: ["Computer Science", "Cybersecurity", "Research"],
-    type: "education",
-  },
-  {
-    title: "Offensive Security Certified Professional (OSCP)",
-    company: "Offensive Security",
-    location: "Online",
-    period: "2023",
-    description: [
-      "Completed 90-day intensive penetration testing course",
-      "Passed 24-hour hands-on certification exam",
-      "Compromised 30+ machines in lab environment",
-      "Mastered privilege escalation and post-exploitation techniques",
-    ],
-    tags: ["OSCP", "Penetration Testing", "Certification"],
-    type: "certification",
-  },
-  {
+    {
+        title: "Certified Phishing Prevention Specialist (CPPS)",
+        company: "Hack and Fix",
+        location: "Remote",
+        period: "2025/12/28",
+        description: [
+            "Obtained knowledge and skills to identify, prevent, and respond to phishing threats",
+        ],
+        tags: ["Security Awareness", "Social Engineering"],
+        type: "certification",
+    },
+    {
     title: "Junior Penetration Tester",
-    company: "SecureNet Solutions",
-    location: "Algiers, Algeria",
-    period: "2022 - 2023",
+    company: "Ingrata:Sec",
+    location: "Remote",
+    period: "2020 (1 month Contract)",
     description: [
-      "Performed vulnerability assessments for 15+ corporate clients",
-      "Conducted social engineering campaigns and phishing simulations",
-      "Automated security scanning processes using Python scripts",
-      "Collaborated with development teams to implement security best practices",
+      "Performed vulnerability assessments for corporate clients",
+      "Assisted in basic Active Directory enumeration and privilege escalation testing",
+      "Documented findings and provided remediation recommendations",
+      "Conducted OSINT investigations to gather publicly available information on targets",
     ],
-    tags: ["Vulnerability Assessment", "Social Engineering", "Python"],
+    tags: ["Vulnerability Assessment", "OSINT", "Python", "Active Directory testing"],
     type: "work",
   },
   {
-    title: "Certified Ethical Hacker (CEH)",
-    company: "EC-Council",
-    location: "Online",
-    period: "2022",
+    title: "IT Support",
+    company: "Self employed ",
+    location: "Blida, Algeria",
+    period: "2019 - 2020",
     description: [
-      "Learned advanced hacking techniques and countermeasures",
-      "Studied network scanning, enumeration, and system hacking",
-      "Gained knowledge in malware analysis and IoT security",
-      "Completed hands-on labs in virtual environment",
+      "Provided technical support for 20+ Windows-based computers",
+      "Installed, configured, and maintained Windows 10 systems and software",
+      "Performed system reinstallation, driver configuration, and malware removal",
+      "Diagnosed and resolved hardware, software, and network connectivity issues",
     ],
-    tags: ["CEH", "Ethical Hacking", "Certification"],
-    type: "certification",
+    tags: ["IT support", "IT system management"],
+    type: "work",
   },
 ];
 
@@ -293,7 +248,7 @@ export default function Experience() {
 
           <div className="text-center p-6 bg-background/60 dark:bg-default-100/50 rounded-lg">
             <div className="text-3xl md:text-4xl font-bold text-primary">
-              3+
+              1.5+
             </div>
             <div className="text-sm text-default-500 mt-2">
               Years Experience
