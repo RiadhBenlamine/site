@@ -54,6 +54,7 @@
     "@nextui-org/react": "^2.6.11",
     "@react-aria/ssr": "3.9.10",
     "@react-aria/visually-hidden": "3.8.29",
+    "@vercel/analytics": "^1.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "11.18.2",

@@ -7,6 +7,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import Navbar from "@/components/navbar";
+import { Analytics } from "@vercel/analytics/next"
 import React from "react";
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head>
         <title>{siteConfig.name}</title>
+          <Analytics/>
       </head>
       <body
         className={clsx(
