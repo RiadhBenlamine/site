@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 import Skills from "./skills/page";
 import Projects from "./projects/page";
-import Experience from "./experince/page";
+import Experience from "@/app/experience/page";
 import { useState, useEffect } from "react";
 
 export default function Home() {

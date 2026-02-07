@@ -2,7 +2,7 @@
 "use client";
 
 import { Card, CardBody, Chip } from "@heroui/react";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface ExperienceItem {
@@ -51,6 +51,7 @@ const experiences: ExperienceItem[] = [
       "Installed, configured, and maintained Windows 10 systems and software",
       "Performed system reinstallation, driver configuration, and malware removal",
       "Diagnosed and resolved hardware, software, and network connectivity issues",
+      "Troubleshooting Android/IOS smartphones"
     ],
     tags: ["IT support", "IT system management"],
     type: "work",
@@ -209,7 +210,7 @@ export default function Experience() {
             Experience & <span className="text-primary">Education</span>
           </h2>
           <p className="text-lg text-default-500 max-w-2xl mx-auto">
-            My professional journey in cybersecurity, from learning the
+            My professional journey in Management,IT and cybersecurity, from learning the
             fundamentals to hunting vulnerabilities
           </p>
         </div>

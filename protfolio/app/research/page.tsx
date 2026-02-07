@@ -2,7 +2,7 @@
 "use client";
 
 import { Card, CardBody, CardFooter, Chip, Button, Link, Tabs, Tab } from "@heroui/react";
-import { Shield, Bug, FileCode, ExternalLink, Award, Calendar, AlertTriangle, CheckCircle } from "lucide-react";
+import {  Bug, FileCode, ExternalLink, Award, Calendar, AlertTriangle, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 
@@ -88,72 +88,84 @@ const cves: CVE[] = [
 const exploits: Exploit[] = [
     {
         id: "1",
-        title: "WordPress Plugin Authentication Bypass Exploit",
-        edbId: "EDB-51234",
+        title: "Student Result Management System 1.0 - SQL Injection",
+        edbId: "EDB-49974",
         platform: "Web Applications",
-        type: "Authentication Bypass",
-        date: "2024-01-20",
+        type: "SQL injection",
+        date: "2021-06-10",
         verified: true,
-        description: "Python exploit for authentication bypass vulnerability in popular WordPress security plugin",
+        description: "POC for sql injection on SRMS 1.0",
         author: "Riadh Benlamine",
-        edbLink: "https://www.exploit-db.com/?author=11167"
+        edbLink: "https://www.exploit-db.com/exploits/49974"
     },
     {
         id: "2",
-        title: "Remote Code Execution via File Upload",
-        edbId: "EDB-51189",
-        platform: "PHP",
-        type: "Remote Code Execution",
-        date: "2023-12-15",
+        title: "Stock Management System 1.0 - Blind SQL injection (Authenticated)",
+        edbId: "EDB-49994",
+        platform: "Web Application",
+        type: "Blind Sql injection",
+        date: "2021-06-14",
         verified: true,
-        description: "Exploit demonstrating RCE through unrestricted file upload in web application framework",
+        description: "PoC demonstrating blind sql injectoin through sanitized input in web application",
         author: "Riadh Benlamine",
-        edbLink: "https://www.exploit-db.com/?author=11167"
+        edbLink: "https://www.exploit-db.com/exploits/49994"
     },
     {
         id: "3",
-        title: "Privilege Escalation in Linux Service",
-        edbId: "EDB-50987",
-        platform: "Linux",
-        type: "Local Privilege Escalation",
-        date: "2023-10-05",
+        title: "Simple CRM 3.0 - Cross-Site Request Forgery (CSRF)",
+        edbId: "EDB-50043",
+        platform: "Web Application",
+        type: "CSRF",
+        date: "2021-06-21",
         verified: true,
-        description: "Local privilege escalation exploit for vulnerable system service",
+        description: "CSRF exploit for vulnerable web application",
         author: "Riadh Benlamine",
-        edbLink: "https://www.exploit-db.com/?author=11167"
+        edbLink: "https://www.exploit-db.com/exploits/50043"
+    },
+    {
+        id: "4",
+        title: "Simple CRM 3.0 - Stored Cross site scripting (XSS)",
+        edbId: "EDB-50044",
+        platform: "Web Application",
+        type: "XSS",
+        date: "2021-06-21",
+        verified: true,
+        description: "Critical XSS vulnerability on web application",
+        author: "Riadh Benlamine",
+        edbLink: "https://www.exploit-db.com/exploits/50044"
     },
 ];
 
 const bugBounties: BugBounty[] = [
     {
         id: "1",
-        program: "Google Vulnerability Reward Program",
-        vulnerability: "Server-Side Request Forgery (SSRF)",
-        severity: "High",
+        program: "Deutsch Telekom",
+        vulnerability: "CSRF",
+        severity: "Medium",
         bounty: "$0",
-        date: "2024-01-10",
+        date: "2020-09-10",
         status: "Resolved",
-        description: "SSRF vulnerability in Google Cloud service allowing internal network enumeration"
+        description: "CSRF vulnerability",
     },
     {
         id: "2",
-        program: "Facebook Bug Bounty",
-        vulnerability: "Information Disclosure",
+        program: "Deutsch Telekom",
+        vulnerability: "Several Clickjacking vulnerabilities",
         severity: "Medium",
         bounty: "$100",
-        date: "2023-11-25",
+        date: "2021-05-25",
         status: "Resolved",
-        description: "Information disclosure vulnerability exposing user data through GraphQL API"
+        description: "Multiple vulnerabilities found"
     },
     {
         id: "3",
-        program: "Microsoft Azure Security",
-        vulnerability: "Authentication Bypass",
-        severity: "Critical",
+        program: "Deutsch Telekom",
+        vulnerability: "HTML/CSS injections",
+        severity: "Low",
         bounty: "$0",
-        date: "2023-09-15",
+        date: "2021-09-15",
         status: "Resolved",
-        description: "Critical authentication bypass in Azure Active Directory integration"
+        description: "Vulnerable domain to HTML injection"
     },
 ];
 
