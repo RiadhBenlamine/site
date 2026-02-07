@@ -10,7 +10,7 @@ import {
     Link,
 } from "@heroui/react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { Shield, Code, Terminal, Globe, Lock, Bug } from "lucide-react";
+import { Terminal, Globe, Lock } from "lucide-react";
 
 interface Project {
     title: string;
@@ -24,13 +24,12 @@ interface Project {
 
 const projects: Project[] = [
     {
-        title: "Network Scanner",
+        title: "Apache-logger",
         description:
-            "Advanced network reconnaissance tool with port scanning, service detection, and vulnerability assessment capabilities.",
-        image: "/project1.jpg", // Replace with your image
-        tags: ["Python", "Networking", "Nmap"],
-        github: "https://github.com/RiadhBenlamine/network-scanner",
-        demo: "https://demo.com",
+            "Apache log analyzer, lightweight log parser for cybersecurity analyst.",
+        image: "/project1.jpg",
+        tags: ["Python", "Log analysis"],
+        github: "https://github.com/RiadhBenlamine/Apache-logger",
         icon: Globe,
     },
     {
@@ -43,42 +42,13 @@ const projects: Project[] = [
         icon: Lock,
     },
     {
-        title: "Web Vulnerability Scanner",
+        title: "Gmail-Shell",
         description:
-            "Automated web application security scanner detecting XSS, SQL injection, and other OWASP Top 10 vulnerabilities.",
-        image: "/project3.jpg",
-        tags: ["Python", "Web Security", "OWASP"],
-        github: "https://github.com/RiadhBenlamine/web-scanner",
-        demo: "https://demo.com",
-        icon: Bug,
-    },
-    {
-        title: "Exploit Development Framework",
-        description:
-            "Custom framework for developing and testing exploits with built-in shellcode generators and payload encoders.",
-        image: "/project4.jpg",
-        tags: ["Python", "Exploit Dev", "Assembly"],
-        github: "https://github.com/RiadhBenlamine/exploit-framework",
-        icon: Code,
-    },
-    {
-        title: "Reverse Shell Tool",
-        description:
-            "Cross-platform reverse shell generator with encryption and anti-detection features for penetration testing.",
+            "Windows based C2 agent.",
         image: "/project5.jpg",
-        tags: ["Python", "C++", "Post-Exploitation"],
-        github: "https://github.com/RiadhBenlamine/reverse-shell",
+        tags: ["Python", "Post-Exploitation"],
+        github: "https://github.com/RiadhBenlamine/gmail-shell",
         icon: Terminal,
-    },
-    {
-        title: "CTF Writeups Platform",
-        description:
-            "Personal blog and writeup platform documenting solutions to CTF challenges and security research findings.",
-        image: "/project6.jpg",
-        tags: ["Next.js", "CTF", "Documentation"],
-        github: "https://github.com/RiadhBenlamine/ctf-writeups",
-        demo: "https://writeups.com",
-        icon: Shield,
     },
 ];
 
