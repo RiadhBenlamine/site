@@ -1,4 +1,3 @@
-// components/Projects.tsx
 "use client";
 
 import {
