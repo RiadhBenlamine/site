@@ -27,7 +27,7 @@ export default function Navbar() {
         { name: "Experience", href: "#experience", icon: Briefcase },
         { name: "Skills", href: "#skills", icon: Code },
         { name: "Projects", href: "#projects", icon: FolderGit2 },
-        {name : "Blogs", href: "/blogs", icon: Book },
+        {name : "Blogs", href: "/blog", icon: Book },
         { name: "Contact", href: "/contact", icon: Mail },
     ];
 

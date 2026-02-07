@@ -1,4 +1,3 @@
-// app/contact/page.tsx
 "use client";
 
 import { Card, CardBody, Button, Input, Textarea, Chip } from "@heroui/react";
@@ -123,7 +122,7 @@ export default function Contact() {
     };
 
     return (
-        <section className="container mx-auto px-6 py-20 relative overflow-hidden min-h-screen">
+        <section className="container mx-auto px-6 py-5 relative overflow-hidden min-h-screen">
             {/* Animated background particles */}
             <div className="absolute inset-0 -z-10">
                 <motion.div
@@ -267,7 +266,7 @@ export default function Contact() {
                                                     <p className="text-sm text-default-500">
                                                         {info.title}
                                                     </p>
-                                                    <p className="font-semibold">{info.value}</p>
+                                                    <a className="font-semibold" href={info.href}>{info.value}</a>
                                                 </div>
                                             </div>
                                         </CardBody>
