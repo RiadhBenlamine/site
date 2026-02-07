@@ -1,7 +1,9 @@
 "use client";
 import { Navbar as Nv, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button } from "@heroui/react";
 import { useState } from "react";
-import { Terminal, Briefcase, Code, FolderGit2, Mail, Book } from "lucide-react";
+import { Briefcase, Code, FolderGit2, Mail, Book } from "lucide-react";
+import { FaMicroscope } from "react-icons/fa";
+import Research from "@/app/research/page";
 
 export const RbnLogo = () => {
     return (
@@ -24,11 +26,12 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: "Experience", href: "#experience", icon: Briefcase },
-        { name: "Skills", href: "#skills", icon: Code },
-        { name: "Projects", href: "#projects", icon: FolderGit2 },
+        { name: "Experience", href: "/experience", icon: Briefcase },
+        { name: "Skills", href: "/skills", icon: Code },
+        { name: "Projects", href: "/projects", icon: FolderGit2 },
         {name : "Blogs", href: "/blog", icon: Book },
         { name: "Contact", href: "/contact", icon: Mail },
+        { name: "Research", href: "/research", icon: FaMicroscope },
     ];
 
     return (
@@ -69,20 +72,7 @@ export default function Navbar() {
             </NavbarContent>
 
             {/* Right side - CTA */}
-            <NavbarContent justify="end">
-                <NavbarItem className="hidden md:flex">
-                    <Button
-                        as={Link}
-                        href="#contact"
-                        color="primary"
-                        variant="flat"
-                        size="sm"
-                        radius="lg"
-                    >
-                        Get In Touch
-                    </Button>
-                </NavbarItem>
-            </NavbarContent>
+
 
             {/* Mobile Menu */}
             <NavbarMenu className="pt-6 gap-2">
