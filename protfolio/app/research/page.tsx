@@ -49,9 +49,9 @@ interface Exploit {
     platform: string;
     type: string;
     date: string;
-    author: "Riadh Benlamine";
+    author: string;
     verified: boolean;
-    edbLink: "https://www.exploit-db.com/?author=11167";
+    edbLink: string;
     description: string;
 }
 
