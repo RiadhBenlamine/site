@@ -2,6 +2,7 @@
 
 import { Card, CardBody, Button, Input, Textarea, Chip } from "@heroui/react";
 import { Mail, MapPin, Github, Linkedin, Twitter, Send, Check } from "lucide-react";
+import { SiHackthebox } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from "react-icons/fa";
@@ -71,6 +72,13 @@ const socialLinks = [
         color: "hover:text-green-400",
         bgColor: "bg-green-400/20",
     },
+    {
+        name: "HackTheBox",
+        icon: SiHackthebox,
+        href: "https://app.hackthebox.com/users/142779",
+        color: "hover:text-green-500",
+        bgColor: "bg-blue-500/20",
+    }
 ];
 
 const contactInfo = [
@@ -300,6 +308,7 @@ export default function Contact() {
                                                 </motion.a>
                                             );
                                         })}
+
                                     </div>
                                 </CardBody>
                             </Card>
