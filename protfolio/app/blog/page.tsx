@@ -156,7 +156,7 @@ function BlogCard({ post, index }: { post: BlogPost; index: number }) {
     );
 }
 
-export default function Blog() {
+export function Blog() {
     const [posts, setPosts] = useState<BlogPost[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
@@ -170,7 +170,7 @@ export default function Blog() {
                     setHeaderVisible(true);
                 }
             },
-            { threshold: 0.1 }
+            {threshold: 0.1}
         );
 
         if (headerRef.current) {
@@ -227,7 +227,7 @@ export default function Blog() {
             }
         };
 
-        // fetchMediumPosts();
+        fetchMediumPosts();
     }, []);
 
     // Helper function to extract image from HTML content
@@ -241,8 +241,9 @@ export default function Blog() {
         <section className="container mx-auto px-6 py-20 relative overflow-hidden min-h-screen">
             {/* Animated background gradient */}
             <div className="absolute inset-0 -z-10">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse delay-1000" />
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"/>
+                <div
+                    className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse delay-1000"/>
             </div>
 
             <div className="space-y-12">
@@ -269,7 +270,7 @@ export default function Blog() {
                 {/* Loading State */}
                 {loading && (
                     <div className="flex justify-center items-center py-20">
-                        <Spinner size="lg" color="primary" />
+                        <Spinner size="lg" color="primary"/>
                     </div>
                 )}
 
@@ -284,7 +285,7 @@ export default function Blog() {
                 {!loading && !error && posts.length > 0 && (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {posts.map((post, index) => (
-                            <BlogCard key={post.guid} post={post} index={index} />
+                            <BlogCard key={post.guid} post={post} index={index}/>
                         ))}
                     </div>
                 )}
@@ -292,7 +293,7 @@ export default function Blog() {
                 {/* Empty State */}
                 {!loading && !error && posts.length === 0 && (
                     <div className="text-center py-20">
-                        <BookOpen className="w-20 h-20 text-default-300 mx-auto mb-4" />
+                        <BookOpen className="w-20 h-20 text-default-300 mx-auto mb-4"/>
                         <p className="text-default-500 text-lg">No posts found</p>
                     </div>
                 )}
@@ -300,21 +301,24 @@ export default function Blog() {
                 {/* Stats */}
                 {!loading && !error && posts.length > 0 && (
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto pt-8">
-                        <div className="text-center p-6 bg-background/60 dark:bg-default-100/50 rounded-lg hover:scale-105 transition-all duration-300">
+                        <div
+                            className="text-center p-6 bg-background/60 dark:bg-default-100/50 rounded-lg hover:scale-105 transition-all duration-300">
                             <div className="text-3xl md:text-4xl font-bold text-primary">
                                 {posts.length}
                             </div>
                             <div className="text-sm text-default-500 mt-2">Total Posts</div>
                         </div>
 
-                        <div className="text-center p-6 bg-background/60 dark:bg-default-100/50 rounded-lg hover:scale-105 transition-all duration-300">
+                        <div
+                            className="text-center p-6 bg-background/60 dark:bg-default-100/50 rounded-lg hover:scale-105 transition-all duration-300">
                             <div className="text-3xl md:text-4xl font-bold text-primary">
                                 {new Set(posts.flatMap((p) => p.categories)).size}
                             </div>
                             <div className="text-sm text-default-500 mt-2">Categories</div>
                         </div>
 
-                        <div className="text-center p-6 bg-background/60 dark:bg-default-100/50 rounded-lg hover:scale-105 transition-all duration-300 col-span-2 md:col-span-1">
+                        <div
+                            className="text-center p-6 bg-background/60 dark:bg-default-100/50 rounded-lg hover:scale-105 transition-all duration-300 col-span-2 md:col-span-1">
                             <div className="text-3xl md:text-4xl font-bold text-primary">
                                 {posts[0] ? formatDate(posts[0].pubDate) : "N/A"}
                             </div>
