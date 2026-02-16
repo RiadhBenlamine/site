@@ -156,7 +156,7 @@ function BlogCard({ post, index }: { post: BlogPost; index: number }) {
     );
 }
 
-export function Blog() {
+export default function Blog() {
     const [posts, setPosts] = useState<BlogPost[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
@@ -194,7 +194,7 @@ export function Blog() {
                 const response = await fetch(
                     `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(
                         rssUrl
-                    )}` // You can get a free API key from rss2json.com for better rate limits
+                    )}`
                 );
 
                 if (!response.ok) {
@@ -235,6 +235,14 @@ export function Blog() {
         const imgRegex = /<img[^>]+src="([^">]+)"/;
         const match = imgRegex.exec(content);
         return match && match[1] ? match[1] : "";
+    };
+
+    const formatDate = (dateString: string) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+        });
     };
 
     return (
@@ -329,12 +337,4 @@ export function Blog() {
             </div>
         </section>
     );
-}
-
-function formatDate(dateString: string) {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-        month: "short",
-        day: "numeric",
-    });
 }
