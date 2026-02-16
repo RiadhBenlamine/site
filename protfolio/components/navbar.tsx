@@ -3,7 +3,6 @@ import { Navbar as Nv, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuT
 import { useState } from "react";
 import { Briefcase, Code, FolderGit2, Mail, Book } from "lucide-react";
 import { FaMicroscope } from "react-icons/fa";
-import Research from "@/app/research/page";
 
 export const RbnLogo = () => {
     return (

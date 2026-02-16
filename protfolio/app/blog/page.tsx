@@ -227,7 +227,7 @@ export default function Blog() {
             }
         };
 
-        fetchMediumPosts();
+        // fetchMediumPosts();
     }, []);
 
     // Helper function to extract image from HTML content

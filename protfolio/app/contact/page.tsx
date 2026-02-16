@@ -1,10 +1,10 @@
 "use client";
 
 import { Card, CardBody, Button, Input, Textarea, Chip } from "@heroui/react";
-import { Mail, MapPin, Github, Linkedin, Twitter, Send, Check } from "lucide-react";
+import { Mail, MapPin, Send, Check } from "lucide-react";
 import { SiHackthebox } from "react-icons/si";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from "react-icons/fa";
 
 import {sendContactEmail} from "@/app/contact/actions";
