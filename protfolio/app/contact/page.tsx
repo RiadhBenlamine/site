@@ -3,8 +3,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiMedium } from "react-icons/si";
-import { Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import {Mail, MapPin, Send, CheckCircle} from "lucide-react";
 import { sendContactEmail } from "./actions";
 
 const socialLinks = [
@@ -15,10 +14,10 @@ const socialLinks = [
         href: "https://github.com/RiadhBenlamine",
     },
     {
-        icon: SiMedium,
-        label: "Medium Blog",
-        value: "medium.com/@rbn0x00",
-        href: "https://medium.com/@rbn0x00",
+        icon: FaLinkedin,
+        label: "Linkedin",
+        value: "linkedin.com/",
+        href: "/",
     },
     {
         icon: Mail,
