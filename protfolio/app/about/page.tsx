@@ -18,12 +18,20 @@ export default function AboutPage() {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        if (!ref.current) return;
+
         const observer = new IntersectionObserver(
-            ([entry]) => entry.isIntersecting && setVisible(true),
+            ([entry]) => {
+                if (entry.isIntersecting) setVisible(true);
+            },
             { threshold: 0.05 }
         );
-        if (ref.current) observer.observe(ref.current);
-        return () => ref.current && observer.unobserve(ref.current);
+
+        observer.observe(ref.current);
+
+        return () => {
+            observer.disconnect();
+        };
     }, []);
 
     return (
