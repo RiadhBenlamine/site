@@ -2,15 +2,17 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Shield, Code, Terminal, Cpu } from "lucide-react";
+import { Shield, Code, Terminal, Cpu, Server } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 
 const highlights = [
     { icon: Shield, label: "Penetration Tester", desc: "Offensive security assessments and adversary simulation" },
-    { icon: Terminal, label: "Tool Developer", desc: "Custom security tooling in Python and C++" },
-    { icon: Code, label: "Security Researcher", desc: "CVE research, reverse engineering, malware analysis" },
+    { icon: Terminal, label: "Developer", desc: "Developing custom software for clients using Python and C++" },
+    { icon: Code, label: "Security Researcher", desc: "CVE research, reverse engineering, and malware analysis" },
     { icon: Cpu, label: "SOC & Log Analysis", desc: "Detection engineering and anomaly hunting" },
+    { icon: Server, label: "System Administrator", desc: "Windows/Linux administration, Active Directory management" },
+
 ];
 
 export default function AboutPage() {
@@ -90,31 +92,21 @@ export default function AboutPage() {
 
                     {/* Bio */}
                     <div className={`flex flex-col gap-6 transition-all duration-1000 delay-300 ${visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}>
-                        <div className="flex flex-col gap-4 text-slate-400 font-light leading-relaxed text-sm">
+                        <div className="flex flex-col gap-4 text-white font-light leading-relaxed text-sm">
                             <p>
-                                I’m <span className="text-white font-semibold">Riadh Benalmine</span>, a cybersecurity enthusiast and junior penetration tester with
-                                strong hands-on experience in <span className="text-cyan-400">offensive security</span>,
-                                web application security, and Linux-based environments.
+                                I’m Riadh Benalmine, a cybersecurity enthusiast and junior penetration tester with practical experience in offensive security, Django development, and system administration. I thrive on solving complex technical challenges and continuously expanding my expertise in security and full-stack development.
                             </p>
 
                             <p>
-                                I actively work on platforms like <span className="text-white">Hack The Box</span> and <span className="text-white">BTLO</span>,
-                                achieving top global rankings. My experience includes building security tools in
-                                <span className="text-white"> Python</span> and <span className="text-white"> C++</span>,
-                                reverse engineering crackme binaries, writing detection and automation scripts,
-                                and contributing a <span className="text-cyan-400">CVE</span>.
+                                I actively sharpen my skills on platforms such as Hack The Box and BTLO. My hands‑on experience spans building custom security tools, reverse engineering crackme binaries, and contributing to a published CVE, demonstrating my commitment to offensive security research and practical problem‑solving.
                             </p>
 
                             <p>
-                                Beyond pentesting, I build full-stack applications using <span className="text-white">Django</span> and
-                                <span className="text-white"> Next.js</span>, focusing on secure design, input validation,
-                                and real-world attack scenarios. My interests include red team tooling,
-                                EDR evasion concepts, network security, and SOC operations.
+                                Beyond penetration testing, I develop full‑stack applications with Django and Next.js, prioritizing secure design principles. I’m deeply interested in red team operations, Active Directory, network security, and SOC. Combining offensive security expertise with practical system administration and development skills.
                             </p>
 
                             <p>
-                                I’m currently strengthening my networking and defensive security fundamentals while preparing
-                                for industry certifications and real-world security roles. Learning by doing is my core philosophy.
+                                I’m currently strengthening my networking and defensive security fundamentals while preparing for industry certifications and real‑world security roles.
                             </p>
                         </div>
 

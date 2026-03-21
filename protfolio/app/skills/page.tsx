@@ -14,15 +14,16 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-    { name: "Penetration Testing", level: 65, category: "Security", icon: Shield },
-    { name: "Python / C++", level: 80, category: "Programming", icon: Code },
-    { name: "Networking", level: 70, category: "Systems", icon: Wifi },
-    { name: "Data Security", level: 75, category: "Security", icon: Lock },
-    { name: "Linux", level: 92, category: "Systems", icon: Terminal },
-    { name: "OWASP Top 10", level: 80, category: "Security", icon: Globe },
+    { name: "Network Penetration Testing", level: 70, category: "Security", icon: Shield },
+    { name: "Web Penetration Testing", level: 65, category: "Security", icon: Shield },
+    { name: "Vulnerability Management", level: 70, category: "Security", icon: Shield },
+    { name: "Python", level: 75, category: "Programming", icon: Code },
+    { name: "C++", level: 50, category: "Programming", icon: Code },
+    { name: "Networking", level: 60, category: "Systems", icon: Wifi },
+    { name: "Linux", level: 85, category: "Systems", icon: Terminal },
     { name: "Log Analysis", level: 90, category: "Analysis", icon: Code },
-    { name: "Windows Server 2022", level: 72, category: "Systems", icon: Server },
-    { name: "Database Management", level: 74, category: "Systems", icon: Database },
+    { name: "Windows Server 2022", level: 70, category: "Systems", icon: Server },
+    { name: "Database Management", level: 65, category: "Systems", icon: Database },
 ];
 
 function getLevelLabel(level: number) {
