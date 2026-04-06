@@ -22,7 +22,7 @@ const projects: Project[] = [
         description: "Apache log analyzer, lightweight log parser for cybersecurity analysts. Surfaces suspicious activity from raw access logs instantly.",
         tags: ["Python", "Log analysis"],
         github: "https://github.com/RiadhBenlamine/Apache-logger",
-        icon: Globe,
+        icon: Lock,
         type: "BLUETEAM TOOL",
         accentColor: "cyan",
     },
@@ -42,8 +42,19 @@ const projects: Project[] = [
         github: "https://github.com/RiadhBenlamine/gmail-shell",
         icon: Terminal,
         type: "POST-EXPLOITATION",
+        accentColor: "magenta",
+    },
+    {
+        title: "SmartMedica",
+        description: "Web-based Software for small-medium sized clinics. Giving full environment tools needed in clinics",
+        tags: ["Python", "Software", "NextJs"],
+        github: "https://github.com/RiadhBenlamine",
+        demo : "https://smartmedica-frontend.vercel.app",
+        icon: Globe,
+        type: "Software",
         accentColor: "green",
     },
+
 ];
 
 const accentMap = {
